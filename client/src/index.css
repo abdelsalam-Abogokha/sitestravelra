@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 187 100% 42%; /* #00BCD4 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 36 100% 50%; /* #FF9800 */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%; /* #FF5252 */
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 187 100% 42%;
+    --radius: 0.5rem;
+    
+    /* Success & Info Colors */
+    --success: 122 39% 49%; /* #4CAF50 */
+    --info: 207 90% 54%; /* #2196F3 */
+    
+    /* Sidebar colors */
+    --sidebar-background: 214 30% 25%; /* #2A3F54 */
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 187 100% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 93%;
+    --sidebar-accent-foreground: 214 30% 25%;
+    --sidebar-border: 214 30% 30%;
+    --sidebar-ring: 187 100% 42%;
+    
+    /* Chart colors */
+    --chart-1: 187 100% 42%;
+    --chart-2: 36 100% 50%;
+    --chart-3: 207 90% 54%;
+    --chart-4: 122 39% 49%;
+    --chart-5: 0 84.2% 60.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-roboto bg-background text-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .ltr-only {
+  transform: scaleX(-1);
+}
+
+/* Font Configuration */
+@layer utilities {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+}
